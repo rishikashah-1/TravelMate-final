@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL AND TOUR WEBSITE</title>
+    <link rel="stylesheet" href="go.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Google Material Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+<!-- CHATBOT BUTTON -->
+<div id="chatbot-btn">💬</div>
+
+<!-- CHATBOT WINDOW -->
+<div id="chatbot">
+    <div class="chat-header">
+        <span>TravelMate AI</span>
+        <span id="closeChat">✖</span>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+        <div class="bot">Hi 👋 I'm TravelMate AI. Ask me about trips, prices, or booking!</div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your question..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<body>
+    <div id="mainContent">
+        <header>
+
+            <div class="video-wrapper">
+                <video autoplay muted loop class="video-bg">
+                    <source src="videos/travel.mp4" type="video/mp4">
+                </video>
+            </div>
+            <nav class="navbar">
+
+                <div class="logo">
+                    TravelMate
+                </div>
+
+                <ul class="nav-links">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#about">About</a></li>
+
+                </ul>
+
+                <button class="register" onclick="openForm()">Sign in</button>
+
+            </nav>
+
+
+            <section class="hero">
+                <div class="overlay">
+                </div>
+                <div class="hero-content">
+                    <p class="tagline">Feel The Experience</p>
+                    <h1>Explore The <br> Majestic Indian <br> Landscape Now</h1>
+                    <button class="cta-btn" onclick="scrollToDestinations()">Get Started →</button>
+
+                </div>
+            </section>
+        </header>
+        <main>
+            <section id="destinations" class="section">
+                <div class="center-align">
+                    <h3 class="section-heading">Popular Packages</h3>
+
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card medium hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img src="rishikesh.jpeg" alt="Destination" class="activator">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Rishikesh <i
+                                        class="material-icons right">expand_more</i></span>
+                                <p class="grey-text">Uttarakhand</p>
+                                <p>Rishikesh (3N) → Neelkanth Mahadev Temple (1N) → Rishikesh (1N)</p>
+                                <div class="card-action">
+                                    <a href="#" onclick="openRishikeshDetails()"
+                                        class="waves-effect waves-light btn-small indigo lighten-1 ">View
+                                        Details</a>
+                                </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Rishikesh <i
+                                        class="material-icons right">close</i></span>
+                                <p>Dive into the spiritual heartbeat of India—Rishikesh, where the Ganges flows pure and
+                                    adventure meets serenity.</p>
+                                <br><b>
+                                    <p>Rishikesh (3N) → Neelkanth Mahadev Temple (1N) → Rishikesh (1N)</p>
+                                </b>
+                                <br>
+                                <ul class="additional-info">
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">rowing</i>
+                                        12 Activities
+                                    </li>
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">location_on</i>
+                                        9 Tourist Spots
+                                    </li>
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">nights_stay</i>
+
+                                        3 days, 2 nights
+                                    </li>
+                                </ul>
+                                <div class="price-block">
+                                    <p>Rs.8,500/person</p>
+                                    <a href="#" onclick="openbooknow()"
+                                        class="right waves-effect waves-light btn-small indigo lighten-1">Book
+                                        Now</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card medium hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img src="ladakh.jpeg" alt="Destination" class="activator">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Ladakh <i
+                                        class="material-icons right">expand_more</i></span>
+                                <!-- <p class="grey-text"></p> -->
+                                <p> Leh (2N) → Pangong Lake (1N) → Leh (1N) → Nubra Valley (1N) → Leh (1N)</p>
+                                <div class="card-action">
+                                    <a href="#" onclick="openLadakhDetails()"
+                                        class="waves-effect waves-light btn-small indigo lighten-1">View
+                                        Details</a>
+                                </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Ladakh <i
+                                        class="material-icons right">close</i></span>
+                                <p>Discover Ladakh, the Land of High Passes, where snow-capped peaks meet turquoise
+                                    lakes
+                                    and ancient monasteries whisper timeless stories</p>
+                                <br><b>
+                                    <p> Leh (2N) → Pangong Lake (1N) → Leh (1N) → Nubra Valley (1N) → Leh (1N)</p>
+                                </b>
+                                <br>
+                                <ul class="additional-info">
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">rowing</i>
+                                        20 Activities
+                                    </li>
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">location_on</i>
+                                        30+ Tourist Spots
+                                    </li>
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">nights_stay</i>
+
+                                        7 days, 6 nights
+                                    </li>
+                                </ul>
+                                <div class="price-block">
+                                    <p>Rs.13,000/person</p>
+                                    <a href="#" onclick="openbooknow()"
+                                        class="right waves-effect waves-light btn-small indigo lighten-1">Book
+                                        Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card medium hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img src="spiti.jpeg" alt="Destination" class="activator">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Spiti Valley <i
+                                        class="material-icons right">expand_more</i></span>
+                                <p class="grey-text">Himachal Pradesh</p>
+                                <p> Shimla(1N) → Sangla(1N) → Kalpa(1N) → Tabo(1N) → Kaza(2N) → Manali(1N)</p>
+                                <div class="card-action">
+                                    <a href="#" onclick="openSpitiDetails()"
+                                        class="waves-effect waves-light btn-small indigo lighten-1">View
+                                        Details</a>
+                                </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Spiti Valley <i
+                                        class="material-icons right">close</i></span>
+                                <p>Spiti is not just a destination, it's a journey through timeless Himalayan silence
+                                    and
+                                    unforgettable adventure.</p>
+                                <br>
+                                <p><b>Shimla(1N) → Sangla(1N) → Kalpa(1N) → Tabo(1N) → Kaza(2N) → Manali(1N)</b></p>
+                                <br>
+                                <ul class="additional-info">
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">rowing</i>
+                                        15 Activities
+                                    </li>
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">location_on</i>
+                                        25 Tourist Spots
+                                    </li>
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">nights_stay</i>
+
+                                        8 days, 7 nights
+                                    </li>
+                                </ul>
+                                <div class="price-block">
+                                    <p>Rs.15,500/person</p>
+                                    <a href="#" onclick="openbooknow()"
+                                        class="right waves-effect waves-light btn-small indigo lighten-1">Book
+                                        Now</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="card medium hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img src="ziro.jpeg" alt="Destination" class="activator">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Ziro Valley <i
+                                        class="material-icons right">expand_more</i></span>
+                                <p class="grey-text">Arunachal Pradesh</p>
+                                <p> Itanagar (1N) → Ziro (2N) → Talley Valley (1N) → Ziro (1N)</p>
+                                <div class="card-action">
+                                    <a href="#" onclick="openZiroDetails()"
+                                        class="waves-effect waves-light btn-small indigo lighten-1">View
+                                        Details</a>
+                                </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Ziro Valley <i
+                                        class="material-icons right">close</i></span>
+                                <p>Ziro Valley, nestled in the lush hills of Arunachal Pradesh, offers breathtaking
+                                    landscapes, rice fields, and a peaceful tribal culture. It's a hidden gem known for
+                                    the
+                                    vibrant Ziro Music Festival and its serene escape from city life.</p>
+                                <br><b>
+                                    <p> Itanagar (1N) → Ziro (2N) → Talley Valley (1N) → Ziro (1N)</p>
+                                </b>
+                                <br>
+                                <ul class="additional-info">
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">rowing</i>
+                                        8 Activities
+                                    </li>
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">location_on</i>
+                                        12 Tourist Spots
+                                    </li>
+                                    <li class="valign-wrapper">
+                                        <i class="material-icons indigo-text">nights_stay</i>
+
+                                        5 days, 4 nights
+                                    </li>
+                                </ul>
+                                <div class="price-block">
+                                    <p>Rs.18,000/person</p>
+                                    <a href="#" onclick="openbooknow()"
+                                        class="right waves-effect waves-light btn-small indigo lighten-1">Book
+                                        Now</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </section>
+            <section id="services" class="services">
+
+                <div class="center-align">
+                    <h2 class="services-heading">Our Services</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit
+                        amet.</p>
+                </div>
+                <div class="image-with-icon">
+                    <img src="vacation.jpeg" alt="vacation" class="vacation-spot">
+                    <div class="icon-grid">
+                        <div class="service-box delay-1">
+                            <i class="ri-hotel-line hotel-icon"></i>
+                            <p><b>Customized Holiday Packages</b></p>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="service-box delay-2">
+                            <i class="ri-flight-takeoff-line plane-icon"></i>
+                            <p><b>Flight Booking</b></p>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="service-box delay-3">
+                            <i class="ri-customer-service-2-line support-icon"></i>
+                            <p><b>24/7 Support</b></p>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="service-box delay-4">
+                            <i class="ri-restaurant-2-line food-icon"></i>
+                            <p><b>Explore Authentic Cuisines</b></p>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="testimonials">
+
+                <h2 class="testimonials">Testimonials</h2>
+                <section class="section testimonial-section">
+                    <div class="container">
+                        <h5 class="center-align">What Our Travelers Say...</h5>
+
+                        <div class="row">
+                            <!-- Testimonial 1 -->
+                            <div class="col s12 m6 l4">
+                                <div class="card testimonial-card">
+                                    <div class="card-content center-align">
+                                        <img src="person1.jpg" alt="Traveler"
+                                            class="circle responsive-img testimonial-img">
+                                        <p class="testimonial-text">"Absolutely the best trip of my life. Everything was
+                                            well organized and beautiful!"</p>
+                                        <h6 class="testimonial-name">Aarav Mehta</h6>
+                                        <p class="grey-text text-darken-1">Adventure Seeker</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 2 -->
+                            <div class="col s12 m6 l4">
+                                <div class="card testimonial-card">
+                                    <div class="card-content center-align">
+                                        <img src="person2.jpg" alt="Traveler"
+                                            class="circle responsive-img testimonial-img">
+                                        <p class="testimonial-text">"Amazing experience! Great service and friendly
+                                            guides
+                                            throughout the tour."</p>
+                                        <h6 class="testimonial-name">Priya Sinha</h6>
+                                        <p class="grey-text text-darken-1">Solo Traveler</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 3 -->
+                            <div class="col s12 m6 l4">
+                                <div class="card testimonial-card">
+                                    <div class="card-content center-align">
+                                        <img src="person3.jpg" alt="Traveler"
+                                            class="circle responsive-img testimonial-img">
+                                        <p class="testimonial-text">"I've never seen such beautiful places or
+                                            experienced
+                                            such smooth service. Everything was customized to fit my pace — absolutely
+                                            perfect!"</p>
+                                        <h6 class="testimonial-name">Rohit </h6>
+                                        <p class="grey-text text-darken-1">Nature Lover</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer>
+            <section id="about">
+                <div class="footer-wrapper">
+                    <div class="footer-about">
+                        <h5>About TravelMate</h5>
+                        <p>Explore the world with ease. Your travel companion for unforgettable journeys.</p>
+                    </div>
+
+                    <br>
+                    <div class="socials">
+
+                        <a href="https://facebook.com" target="_blank"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="ri-instagram-fill"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    </div>
+                    <br>
+                    <div class="contact-about">
+                        <h5>Contact Us</h5>
+
+                        <div class="contact-item">
+                            <i class="ri-phone-fill"></i>
+                            <span>+91 4546457861</span>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="ri-mail-line"></i>
+                            <span>youremail@example.com</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <div id="formPopup" class="form-pop-up">
+        <form class="formcontainer">
+            <i class="material-icons close" id="closeBtn">close</i></span>
+            <h5 class="login-heading">Sign in</h5>
+            <a href="#" class="google-btn">
+                <div class="google-icon-wrapper">
+                    <img class="google-icon" src="g-logo.png" alt="Google logo">
+                </div>
+                <span>Sign in with Google</span>
+            </a>
+            <a href="#" class="facebook-btn">
+                <div class="facebook-icon-wrapper">
+                    <img class="facebook-icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+                        alt="facebook logo">
+                </div>
+                <span>Sign in with Facebook</span>
+            </a>
+            <div class="separator">
+                <div></div>
+                <span>or</span>
+                <div></div>
+            </div>
+
+            <input type="email" placeholder="id@email.com" required>
+            <input type="password" placeholder="Password" required>
+            <div class="submit">
+                <button class="submit-btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="first.js"></script>
+</body>
+
+</html>

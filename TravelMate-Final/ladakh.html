@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Details-Ladakh</title>
+    <link rel="stylesheet" href="ladakh.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Google Material Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<!-- CHATBOT BUTTON -->
+<div id="chatbot-btn">💬</div>
+
+<!-- CHATBOT WINDOW -->
+<div id="chatbot">
+    <div class="chat-header">
+        <span>TravelMate AI</span>
+        <span id="closeChat">✖</span>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+        <div class="bot">Hi 👋 I'm TravelMate AI. Ask me about trips, prices, or booking!</div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your question..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+<body>
+    <div id="mainContent">
+        <header>
+            <div>
+                <img src="ladakh.jpg" alt="" class="ladakh-image">
+            </div>
+            <nav class="navbar">
+
+                <div class="logo">
+                    TravelMate
+                </div>
+
+                <ul class="nav-links">
+
+                    <li><a href="hello.html#home">Home</a></li>
+                    <li><a href="hello.html#destinations">Destinations</a></li>
+                    <li><a href="hello.html#services">Services</a></li>
+                    <li><a href="hello.html#testimonials">Testimonials</a></li>
+                    <li><a href="hello.html#about">About</a></li>
+
+                </ul>
+
+                <button class="register" onclick="openForm()">Sign in</button>
+
+            </nav>
+            <section class="hero">
+                <div class="overlay">
+                </div>
+                <div class="hero-content">
+                    <p class="tagline"><b> LET US PLAN YOU A PERFECT</b></p>
+                    <h1>LADAKH<br> TRIP </h1>
+
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="reasons">
+                <div class="diamond-container">
+                    <div class="diamond-wrapper one">
+                        <div class="diamond">
+                            <img src="ladakh1.jpg" alt="">
+
+                        </div>
+                    </div>
+                    <div class="diamond-wrapper two">
+                        <div class="diamond">
+                            <img src="ladakh3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="diamond-wrapper three">
+                        <div class="diamond">
+                            <img src="ladakh2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="reasons-content">
+                    <p class="tag-line">REASONS</p>
+                    <h4><b> YOU SHOULD <br>VISIT LADAKH</b></h4>
+                    <div class="timeline">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content delay-1">
+                                <h3><b>Enchanting Mountain Scenery</b></h3>
+                                <p>Ladakh is renowned for its dramatic landscapes, from rugged mountain ranges to serene
+                                    valleys. The combination of golden deserts, crystal-clear rivers, and snow-draped
+                                    peaks
+                                    makes every view postcard-perfect. Trekking or road trips here feel like stepping
+                                    into
+                                    another world.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content delay-2">
+                                <h3><b>Rich Monastic Heritage</b></h3>
+                                <p>The region is dotted with centuries-old Buddhist monasteries and stupas. Places like
+                                    Alchi, Spituk, and Lamayuru allow visitors to witness ancient rituals, colorful
+                                    murals,
+                                    and a deep sense of spirituality. It’s a cultural immersion unlike anywhere else.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content delay-2">
+                                <h3><b>Thrilling Outdoor Adventures</b></h3>
+                                <p>From high-altitude trekking and mountain biking to river rafting and jeep safaris,
+                                    Ladakh
+                                    offers a playground for adventure seekers. The extreme terrain and breathtaking
+                                    backdrops make every activity both challenging and exhilarating.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3><b>Cosmic Nights & Stargazing</b></h3>
+                                <p>Thanks to its altitude and clear skies, Ladakh is ideal for stargazing. The Milky
+                                    Way,
+                                    planets, and shooting stars are visible with remarkable clarity. Nights in Ladakh
+                                    feel
+                                    magical, making it unforgettable for astronomy lovers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="openbooknow()" class="cta-btn">BOOK TOUR</button>
+                    <div class="tour-itinerary">
+                        <h4><b> TOUR ITINERARY</b></h4>
+                    </div>
+                </div>
+            </section>
+            <section class="itinerary-layout">
+                <div class="video-side">
+
+                    <img src="ladakh-stars.jpg" alt="">
+                </div>
+                <div class="itinerary-side">
+
+                    <section class="itinerary-layout">
+
+                        <div class="itinerary-side">
+                            <section class="itinerary-section">
+                                <h2 class="itinerary-title">✨ 6-Day Leh & Ladakh Tour Itinerary</h2>
+
+                                <div class="day">
+                                    <h3>🗓️ Day 1 – Arrival in Leh</h3>
+                                    <ul>
+                                        <li>Arrive in Leh and check in to your hotel or guesthouse.</li>
+                                        <li>Rest and acclimatize to the high altitude to avoid AMS.</li>
+                                        <li>Explore the Leh market in the evening and enjoy local cuisine.</li>
+                                        <li><b>Overnight stay:</b> Leh.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="day">
+                                    <h3>🗓️ Day 2 – Leh Local Sightseeing</h3>
+                                    <ul>
+                                        <li>Visit <b>Shanti Stupa</b>, <b>Leh Palace</b>, and <b>Sankar Monastery</b>.
+                                        </li>
+                                        <li>Stroll through local bazaars for souvenirs and handicrafts.</li>
+                                        <li>Enjoy panoramic views of Leh town against the Himalayan backdrop.</li>
+                                        <li><b>Overnight stay:</b> Leh.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="day">
+                                    <h3>🗓️ Day 3 – Leh → Pangong Lake</h3>
+                                    <ul>
+                                        <li>Drive to <b>Pangong Lake</b> via Chang La Pass (5–6 hours).</li>
+                                        <li>Enjoy stunning views of the crystal-clear blue lake surrounded by mountains.
+                                        </li>
+                                        <li>Relax, click photos, and soak in the tranquil scenery.</li>
+                                        <li><b>Overnight stay:</b> Pangong Lake (camp or resort).</li>
+                                    </ul>
+                                </div>
+
+                                <div class="day">
+                                    <h3>🗓️ Day 4 – Pangong → Leh</h3>
+                                    <ul>
+                                        <li>Early morning sunrise at Pangong Lake.</li>
+                                        <li>Drive back to Leh with stops at scenic viewpoints along the way.</li>
+                                        <li>Evening free for leisure or light exploration around Leh.</li>
+                                        <li><b>Overnight stay:</b> Leh.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="day">
+                                    <h3>🗓️ Day 5 – Leh → Nubra Valley</h3>
+                                    <ul>
+                                        <li>Drive to <b>Nubra Valley</b> via Khardung La Pass.</li>
+
+                            </section>
+                            <div class="price">
+                                <p>Rs.13,000/person</p>
+                            </div>
+                        </div>
+                    </section>
+                    <button onclick="openbooknow()" class="cta-btn1">BOOK TOUR</button>
+        </main>
+    </div>
+    <div id="formPopup" class="form-pop-up">
+        <form class="formcontainer">
+            <i class="material-icons close" id="closeBtn">close</i></span>
+            <h5 class="login-heading">Sign in</h5>
+            <button type="button" class="google-btn">
+                <div class="google-icon-wrapper">
+                    <img class="google-icon" src="g-logo.png" alt="Google logo">
+                </div>
+                <span>Sign in with Google</span>
+            </button>
+            <button type="button" class="facebook-btn">
+                <div class="facebook-icon-wrapper">
+                    <img class="facebook-icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+                        alt="facebook logo">
+                </div>
+                <span>Sign in with Facebook</span>
+            </button>
+            <div class="separator">
+                <div></div>
+                <span>or</span>
+                <div></div>
+            </div>
+
+            <input type="email" placeholder="id@email.com" required>
+            <input type="password" placeholder="Password" required>
+            <div class="submit">
+                <button class="submit-btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="rishikesh.js"></script>
+</body>
+
+</html>

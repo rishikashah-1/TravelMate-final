@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Details-Ziro</title>
+    <link rel="stylesheet" href="ziro.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Google Material Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<!-- CHATBOT BUTTON -->
+<div id="chatbot-btn">💬</div>
+
+<!-- CHATBOT WINDOW -->
+<div id="chatbot">
+    <div class="chat-header">
+        <span>TravelMate AI</span>
+        <span id="closeChat">✖</span>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+        <div class="bot">Hi 👋 I'm TravelMate AI. Ask me about trips, prices, or booking!</div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your question..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+<body>
+     <div id="mainContent">
+    <header>
+        <div>
+            <img src="ziro-image.jpeg" alt="" class="spiti-image">
+        </div>
+        <nav class="navbar">
+
+            <div class="logo">
+                TravelMate
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#about">About</a></li>
+
+            </ul>
+
+            <button class="register" onclick="openForm()">Sign in</button>
+
+        </nav>
+        <section class="hero">
+            <div class="overlay">
+            </div>
+            <div class="hero-content">
+                <p class="tagline"><b> LET US PLAN YOU A PERFECT</b></p>
+                <h1>ZIRO VALLEY<br> TRIP </h1>
+
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="reasons">
+            <div class="diamond-container">
+                <div class="diamond-wrapper one">
+
+                    <div class="diamond">
+                        <img src="ziro-image1.jpeg" alt="">
+
+                    </div>
+                </div>
+                <div class="diamond-wrapper two">
+                    <div class="diamond">
+                        <img src="ziro-image2.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="diamond-wrapper three">
+                    <div class="diamond">
+                        <img src="ziro-image3.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="reasons-content">
+                <p class="tag-line">REASONS</p>
+                <h4><b> YOU SHOULD <br>VISIT ZIRO VALLEY</b></h4>
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content delay-1">
+                            <h3><b>A Valley of Calm & Culture</b></h3>
+                            <p>Ziro is a peaceful valley where nature and tradition coexist. The slow pace of life and
+                                warm local culture
+                                offer a refreshing escape from busy city routines.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content delay-2">
+                            <h3><b>Home of the Apatani Tribe</b></h3>
+                            <p>Ziro is renowned for the Apatani tribe, known for their sustainable lifestyle, unique
+                                customs, and
+                                UNESCO-recognized paddy-cum-fish farming practices.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content delay-2">
+                            <h3><b>Lush Green Landscapes</b></h3>
+                            <p>Surrounded by pine forests, rice fields, and rolling hills, Ziro offers breathtaking
+                                natural beauty in every
+                                season, making it perfect for nature lovers.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3><b>A Photographer’s & Music Lover’s Haven</b></h3>
+                            <p>From misty mornings and golden paddy fields to the famous Ziro Music Festival, the valley
+                                is a visual and
+                                cultural delight for photographers and art enthusiasts.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button onclick="openbooknow()" class="cta-btn">BOOK TOUR</button>
+                <div class="tour-itinerary">
+                    <h4><b> TOUR ITINERARY</b></h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="itinerary-layout">
+            <div class="video-side">
+                <video autoplay muted loop>
+                    <source src="ziro-video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="itinerary-side">
+
+                <section class="itinerary-section">
+                    <h2 class="itinerary-title">✨ 6-Day Ziro Valley</h2>
+
+                    <div class="day">
+                        <h3>🗓️ Day 1 – Arrival in Itanagar (1 Night)</h3>
+                        <ul>
+                            <li>Arrival at <b>Itanagar / Naharlagun</b>.</li>
+                            <li>Check in to your hotel and relax.</li>
+                            <li>Visit <b>Ita Fort</b> and <b>Jawaharlal Nehru State Museum</b>.</li>
+                            <li>Evening visit to <b>Ganga Lake (Gyakar Sinyi)</b>.</li>
+                            <li><b>Overnight stay:</b> Itanagar.</li>
+                        </ul>
+                    </div>
+
+                    <div class="day">
+                        <h3>🗓️ Day 2 – Itanagar → Ziro (2 Nights)</h3>
+                        <ul>
+                            <p>⏱️ 5–6 hrs | 📍 ~110 km</p>
+                            <li>Early morning drive to <b>Ziro Valley</b>.</li>
+                            <li>Enjoy scenic mountain roads and forest views.</li>
+                            <li>Check in to hotel/homestay.</li>
+                            <li>Evening free for a relaxed walk around Ziro town.</li>
+                            <li><b>Overnight stay:</b> Ziro.</li>
+                        </ul>
+                    </div>
+
+                    <div class="day">
+                        <h3>🗓️ Day 3 – Ziro Local Sightseeing</h3>
+                        <ul>
+                            <li>Visit traditional <b>Apatani tribal villages</b> – Hong, Hari & Bulla.</li>
+                            <li>Explore unique <b>Paddy-cum-Fish cultivation fields</b>.</li>
+                            <li>Visit <b>Craft Centre</b> and local markets.</li>
+                            <li>Sunset at <b>Ziro Valley Viewpoint</b>.</li>
+                            <li><b>Overnight stay:</b> Ziro.</li>
+                        </ul>
+                    </div>
+
+                    <div class="day">
+                        <h3>🗓️ Day 4 – Ziro → Talley Valley (1 Night)</h3>
+                        <ul>
+                            <p>⏱️ 2–3 hrs | 📍 ~35 km</p>
+                            <li>Drive to <b>Talley Valley Wildlife Sanctuary</b>.</li>
+                            <li>Explore dense forests, rivers, and untouched landscapes.</li>
+                            <li>Short nature walks and birdwatching.</li>
+                            <li>Experience peaceful wilderness away from crowds.</li>
+                            <li><b>Overnight stay:</b> Talley Valley (eco-camp/forest lodge).</li>
+                        </ul>
+                    </div>
+
+                    <div class="day">
+                        <h3>🗓️ Day 5 – Talley Valley → Ziro (1 Night)</h3>
+                        <ul>
+                            <p>⏱️ 2–3 hrs | 📍 ~35 km</p>
+                            <li>Morning nature walk inside Talley Valley.</li>
+                            <li>Drive back to <b>Ziro</b>.</li>
+                            <li>Free time for photography or leisure.</li>
+                            <li>Optional café hopping or cultural interaction with locals.</li>
+                            <li><b>Overnight stay:</b> Ziro.</li>
+                        </ul>
+                    </div>
+
+                    <div class="day">
+                        <h3>🗓️ Day 6 – Departure from Ziro</h3>
+                        <ul>
+                            <li>Breakfast at hotel.</li>
+                            <li>Drive back to <b>Itanagar / Naharlagun</b> or onward destination.</li>
+                            <li><b>Tour ends</b> with serene memories of Arunachal Pradesh.</li>
+                        </ul>
+                    </div>
+
+                </section>
+                <div class="price">
+                    <p>Rs.15,500/person</p>
+                </div>
+            </div>
+        </section>
+        <button onclick="openbooknow()" class="cta-btn1">BOOK TOUR</button>
+    </main>
+    </div>
+    <div id="formPopup" class="form-pop-up">
+        <form class="formcontainer">
+            <i class="material-icons close" id="closeBtn">close</i></span>
+            <h5 class="login-heading">Sign in</h5>
+            <button type="button" class="google-btn">
+                <div class="google-icon-wrapper">
+                    <img class="google-icon" src="g-logo.png" alt="Google logo">
+                </div>
+                <span>Sign in with Google</span>
+            </button>
+            <button type="button" class="facebook-btn">
+                <div class="facebook-icon-wrapper">
+                    <img class="facebook-icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+                        alt="facebook logo">
+                </div>
+                <span>Sign in with Facebook</span>
+            </button>
+            <div class="separator">
+                <div></div>
+                <span>or</span>
+                <div></div>
+            </div>
+
+            <input type="email" placeholder="id@email.com" required>
+            <input type="password" placeholder="Password" required>
+            <div class="submit">
+                <button class="submit-btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="rishikesh.js"></script>
+</body>
+
+</html>

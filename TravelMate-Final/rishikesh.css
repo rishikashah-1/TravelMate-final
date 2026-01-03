@@ -1,0 +1,811 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+header {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  /* full screen height */
+  overflow: hidden;
+  /* crop video overflow */
+}
+
+.rishikesh-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 10;
+  /* ensures nav is above video */
+  background: rgba(0, 0, 0, 0.3);
+  /* optional translucent bg */
+  color: white;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register {
+  background: #ff6600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+
+}
+
+
+.nav-links a {
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffd700;
+}
+
+.register {
+  background: linear-gradient(to right, #70ABAF, #111111);
+  color: white;
+  padding: 8px 16px;
+  border: 2px solid rgb(6, 1, 1);
+  border-radius: 40px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  width: 120px;
+  height: 50px;
+}
+
+.register:hover {
+  color: #ffd700;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  z-index: 2;
+  /* ensures text is above overlay */
+  text-align: center
+}
+
+.hero-content {
+  color: white;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin: 0;
+
+}
+
+.hero-content .tagline {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+main {
+  background: linear-gradient(to top, #131313, #111111);
+  min-height: 100vh;
+  padding-bottom: 80px;
+  
+}
+
+.reasons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 2;
+  /* ensures text is above overlay */
+  text-align: center
+}
+
+.reasons-content .tag-line {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: rgb(208, 155, 32);
+}
+
+.reasons-content h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.reasons-content {
+  padding-top: 200px;
+  transform: translateY(-150px);
+  /* moves text 50px upward */
+}
+
+
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding: 0;
+  width: 2px;
+  background: #d4af37;
+  /* gold vertical line */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #d4af37;
+  border-radius: 50%;
+  border: 3px solid #3f413f;
+  /* match background */
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.timeline-content {
+  position: relative;
+  width: 450px;
+  padding: 15px;
+  background: #1c1d1c;
+  border-radius: 10px;
+  text-align: left;
+  left: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+  /* adjust placement */
+}
+.timeline-content.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-dot.active {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.2);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  background: gold;
+  height: 0;
+  transition: height 0.6s linear;
+}
+
+.timeline-content h3 {
+  font-size: 1rem;
+  color: #d4af37;
+
+}
+
+.timeline-content p {
+  color: white;
+}
+
+
+.diamond {
+  width: 300px;
+  height: 300px;
+  margin-left: -450px;
+  overflow: hidden;
+  transform: rotate(45deg) ;   /* make container diamond */
+  
+}
+
+.diamond video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(-45deg);  
+}
+
+
+.diamond-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+ margin-left: -200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* shared diamond style */
+.diamond-wrapper {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.diamond-wrapper.one {
+  top: 0%;
+  left: 0%;
+}
+
+.diamond-wrapper.two {
+  top: 180px;
+  left: 200px;
+}
+.diamond-wrapper.three {
+  top: -110px;
+  left: 290px;
+}
+.diamond {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  transform: rotate(45deg);
+  border: 2px solid rgb(146, 145, 144);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* upright image/video inside */
+.diamond img,
+.diamond video {
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  object-fit: cover;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  display: block;
+}
+
+
+.cta-btn {
+  padding: 10px 28px;
+  background-color: black;
+  color:gold;
+  font-weight: 600;
+  border: 2px solid rgb(245, 245, 248);
+  border-color:gold ;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
+
+
+.tour-itinerary h4 {
+  padding-top: 120px;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.image {
+  margin-left: 500px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 30px;
+ 
+  position: relative;
+  z-index: 1;
+}
+
+.image img {
+  width: 450px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+.image2{
+  position: relative;
+  top: -80px; 
+  left: 200px;
+  
+  border-radius: 15px;
+}
+
+/* ----------- Itinerary beside image layout ------------ */
+.itinerary-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 100px auto;
+  max-width: 1200px;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.image-side img {
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* The itinerary box (your existing style slightly adjusted) */
+.itinerary-side {
+  flex: 1;
+  min-width: 400px;
+}
+
+.itinerary-section {
+  margin-top: -180px;
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid gold;
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+  font-family: "Barlow", sans-serif;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  font-size: 1rem;
+}
+
+.itinerary-title {
+  text-align: center;
+  color: gold;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.day {
+  margin-bottom: 25px;
+}
+
+.day h3 {
+  color: #ffd700;
+  font-size: 1.2rem;
+  border-left: 4px solid gold;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+
+.day ul {
+  margin-left: 25px;
+  list-style-type: disc;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .itinerary-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-side img {
+    width: 100%;
+    height: auto;
+  }
+
+  .itinerary-side {
+    width: 100%;
+  }
+}
+
+.price p{
+  background-color: black;
+  color: gold;
+ font-size: 1.5rem;
+ border: 1px solid gold;
+ text-align: center;
+
+}
+/* ================= POPUP OVERLAY ================= */
+.form-pop-up {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Show popup */
+.form-pop-up.show {
+  display: flex;
+}
+
+/* ================= POPUP BOX ================= */
+.formcontainer {
+  background: #ffffff;
+  width: 550px;
+  max-width: 90%;
+  height: 550px;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: popupScale 0.3s ease;
+}
+
+/* Popup open animation */
+@keyframes popupScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= CLOSE ICON ================= */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #555;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* ================= HEADING ================= */
+.login-heading {
+  font-size: 27px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ================= INPUTS ================= */
+.formcontainer input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.formcontainer input:focus {
+  outline: none;
+  border-color: #5ccf62;
+}
+
+/* ================= BUTTONS ================= */
+.google-btn,
+.facebook-btn {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 28px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Google */
+.google-btn {
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+}
+
+.google-btn:hover {
+  background-color: #357ae8;
+}
+
+/* Facebook */
+.facebook-btn {
+  background-color: #ffffff;
+  color: #357ae8;
+  border: 2px solid #357ae8;
+}
+
+.facebook-btn:hover {
+  background-color: #f2f6ff;
+}
+
+/* ================= ICON WRAPPERS ================= */
+.google-icon-wrapper,
+.facebook-icon-wrapper {
+  background: white;
+  border-radius: 50%;
+  padding: 6px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-icon,
+.facebook-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ================= SEPARATOR ================= */
+.separator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.separator div {
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}
+
+.separator span {
+  margin: 0 10px;
+  color: #777;
+}
+
+/* ================= SUBMIT ================= */
+.submit {
+  margin-top: 25px;
+}
+
+.submit-btn {
+  width: 150px;
+  height: 45px;
+  background-color: #5ccf62;
+  color: #000;
+  font-size: 18px;
+  border-radius: 25px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #4bb956;
+}
+
+/* ================= BLUR BACKGROUND ================= */
+#mainContent.blur {
+  filter: blur(6px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Prevent page scroll when popup open */
+body.popup-open {
+  overflow: hidden;
+}
+
+.cta-btn1 {
+  display: block;           /* makes it a block element so margin works */
+  margin: 40px auto;        /* centers it horizontally */
+  padding: 20px 52px;
+  background-color: black;
+  color: gold;
+  font-weight: 600;
+  border: 2px solid gold;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  text-align: center;
+}
+
+.cta-btn1:hover {
+  background-color: gold;
+  color: black;
+}
+
+#mainContent.blur {
+  filter: blur(6px);
+  user-select: none;
+}
+
+
+/* Popup base */
+.form-pop-up {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* When visible */
+.form-pop-up.show {
+  display: flex;
+}
+
+button, a {
+  outline: none;
+  transform: none;
+}
+
+button:focus,
+a:focus {
+  outline: none;
+}
+body.popup-open {
+  overflow: hidden;
+}
+
+#chatbot-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background:rgb(5, 128, 104);
+  color: black;
+  font-size: 24px;
+  padding: 14px;
+  border:2px solid black;
+  
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* Chat Window */
+#chatbot {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 320px;
+  height: 420px;
+  background: #111;
+  color: white;
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+}
+
+/* Header */
+.chat-header {
+  background: black;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* Body */
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.chat-body .bot {
+  background: #222;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.chat-body .user {
+  background: gold;
+  color:white;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+/* Input */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 8px;
+  border: none;
+}
+
+.chat-input button {
+  background: gold;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* User typing text color */
+.chat-input input {
+  color: white;              /* text while typing */
+  background-color: #222;    /* dark background */
+}
+
+/* Placeholder color */
+.chat-input input::placeholder {
+  color: #aaa;
+}

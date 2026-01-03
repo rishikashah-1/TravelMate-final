@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Details-Rishikesh</title>
+    <link rel="stylesheet" href="rishikesh.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Google Material Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<!-- CHATBOT BUTTON -->
+<div id="chatbot-btn">💬</div>
+
+<!-- CHATBOT WINDOW -->
+<div id="chatbot">
+    <div class="chat-header">
+        <span>TravelMate AI</span>
+        <span id="closeChat">✖</span>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+        <div class="bot">Hi 👋 I'm TravelMate AI. Ask me about trips, prices, or booking!</div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your question..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+<body>
+    <div id="mainContent">
+        <header>
+            <div>
+                <img src="rishi-image.jpg" alt="" class="rishikesh-image">
+            </div>
+            <nav class="navbar">
+
+                <div class="logo">
+                    TravelMate
+                </div>
+
+                <ul class="nav-links">
+
+                    <li><a href="hello.html#home">Home</a></li>
+                    <li><a href="hello.html#destinations">Destinations</a></li>
+                    <li><a href="hello.html#services">Services</a></li>
+                    <li><a href="hello.html#testimonials">Testimonials</a></li>
+                    <li><a href="hello.html#about">About</a></li>
+
+
+                </ul>
+
+                <button class="register" onclick="openForm()">Sign in</button>
+
+            </nav>
+            <section class="hero">
+                <div class="overlay">
+                </div>
+                <div class="hero-content">
+                    <p class="tagline"><b> LET US PLAN YOU A PERFECT</b></p>
+                    <h1>RISHIKESH<br> TRIP </h1>
+
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="reasons">
+                <div class="diamond-container">
+                    <div class="diamond-wrapper one">
+                        <div class="diamond">
+                            <video autoplay muted loop>
+                                <source src="rishikesh.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="diamond-wrapper two">
+                        <div class="diamond">
+                            <img src="rishikesh-nature.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="diamond-wrapper three">
+                        <div class="diamond">
+                            <img src="rishikesh.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="reasons-content">
+                    <p class="tag-line">REASONS</p>
+                    <h4><b> YOU SHOULD <br>VISIT RISHIKESH</b></h4>
+                    <div class="timeline">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content delay-1">
+                                <h3><b>Spiritual Hub</b></h3>
+                                <p>Rishikesh is world-famous as the “Yoga Capital of the World,” with numerous ashrams
+                                    and
+                                    meditation centers that attract seekers from across the globe. It’s a place to learn
+                                    yoga, deepen spiritual practices, and find inner peace along the banks of the holy
+                                    Ganges</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content delay-2">
+                                <h3><b>Adventure Activities</b></h3>
+                                <p>Beyond spirituality, Rishikesh is a hotspot for thrill-seekers. From white-water
+                                    rafting
+                                    in the Ganges to bungee jumping, zip-lining, and trekking, it offers unforgettable
+                                    adventures in a breathtaking natural setting.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content delay-2">
+                                <h3><b>Cultural Experiences</b></h3>
+                                <p>Tourists can witness the mesmerizing Ganga Aarti at Triveni Ghat, explore vibrant
+                                    local
+                                    markets, and take part in cultural festivals like the International Yoga Festival.
+                                    It’s
+                                    a chance to immerse in Indian traditions and spirituality.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3><b>Scenic Beauty</b></h3>
+                                <p>Nestled in the foothills of the Himalayas, Rishikesh is blessed with lush greenery,
+                                    serene riverbanks, and majestic mountain views. It’s an ideal spot for nature
+                                    lovers,
+                                    photographers, and anyone seeking tranquility..</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta-btn" onclick="window.location.href='booknow.html'">
+                        BOOK TOUR
+                    </button>
+
+                    <div class="tour-itinerary">
+                        <h4><b> TOUR ITINERARY</b></h4>
+                    </div>
+                </div>
+            </section>
+
+            <section class="itinerary-layout">
+                <div class="image-side">
+
+                    <img src="image2.jpg" alt="">
+                </div>
+                <div class="itinerary-side">
+
+                    <section class="itinerary-section">
+                        <h2 class="itinerary-title">✨ 6-Day Rishikesh & Neelkanth Mahadev Temple Tour Itinerary</h2>
+
+                        <div class="day">
+                            <h3>🗓️ Day 1 – Arrival in Rishikesh</h3>
+                            <ul>
+                                <li>Arrive in Rishikesh and check in to your hotel or riverside resort.</li>
+                                <li>Relax and enjoy scenic views of the holy Ganga River.</li>
+                                <li>Attend the mesmerizing <b>Ganga Aarti at Triveni Ghat</b>.</li>
+                                <li>Explore local cafés and markets near Lakshman Jhula.</li>
+                                <li><b>Overnight stay:</b> Rishikesh.</li>
+                            </ul>
+                        </div>
+
+                        <div class="day">
+                            <h3>🗓️ Day 2 – Yoga, Temples & River Walk</h3>
+                            <ul>
+                                <li>Begin the day with an early morning <b>yoga and meditation session</b> at a
+                                    traditional
+                                    ashram.</li>
+                                <li>Visit <b>Parmarth Niketan Ashram</b>, <b>Beatles Ashram</b>, and <b>Ram Jhula</b>.
+                                </li>
+                                <li>Optional short trek to <b>Neer Garh Waterfall</b>.</li>
+                                <li>Dine at the famous <b>Chotiwala Restaurant</b> or a riverside café.</li>
+                                <li><b>Overnight stay:</b> Rishikesh.</li>
+                            </ul>
+                        </div>
+
+                        <div class="day">
+                            <h3>🗓️ Day 3 – Adventure Day</h3>
+                            <ul>
+                                <li>Enjoy thrilling <b>white-water rafting</b> on the Ganges (Brahmapuri–Rishikesh
+                                    stretch).
+                                </li>
+                                <li>Try <b>bungee jumping</b>, <b>ziplining</b>, or <b>cliff jumping</b> (optional).
+                                </li>
+                                <li>Relax in the evening with an <b>Ayurvedic massage or spa session</b>.</li>
+                                <li>Spend leisure time in riverside cafés.</li>
+                                <li><b>Overnight stay:</b> Rishikesh.</li>
+                            </ul>
+                        </div>
+
+                        <div class="day">
+                            <h3>🗓️ Day 4 – Rishikesh → Neelkanth Mahadev Temple</h3>
+                            <ul>
+                                <li>After breakfast, drive to <b>Neelkanth Mahadev Temple</b> (approx. 30 minutes).</li>
+                                <li>Visit the sacred <b>Lord Shiva temple</b> nestled in forested hills.</li>
+                                <li>Experience calm and spiritual vibes surrounded by lush greenery.</li>
+                                <li>Optional short hike to nearby viewpoints or waterfalls.</li>
+                                <li><b>Overnight stay:</b> Neelkanth area.</li>
+                            </ul>
+                        </div>
+
+                        <div class="day">
+                            <h3>🗓️ Day 5 – Neelkanth → Return to Rishikesh</h3>
+                            <ul>
+                                <li>Morning temple visit or nature walk around the temple area.</li>
+                                <li>Return to Rishikesh by afternoon.</li>
+                                <li>Free time for <b>shopping, café hopping, or relaxation</b>.</li>
+                                <li>Evening <b>Ganga Aarti</b> or meditation session (optional).</li>
+                                <li><b>Overnight stay:</b> Rishikesh.</li>
+                            </ul>
+                        </div>
+
+                        <div class="day">
+                            <h3>🗓️ Day 6 – Departure</h3>
+                            <ul>
+                                <li>Enjoy a peaceful morning yoga session or a sunrise walk along the Ganga.</li>
+                                <li>Check out after breakfast.</li>
+                                <li>Transfer to Haridwar/Dehradun/Delhi for your onward journey.</li>
+                                <li><b>Tour ends</b> with unforgettable spiritual and adventure memories.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <div class="price">
+                        <p>Rs.8,500/person</p>
+                    </div>
+                </div>
+            </section>
+            <button onclick="openbooknow()" class="cta-btn1">BOOK TOUR</button>
+        </main>
+    </div>
+    <div id="formPopup" class="form-pop-up">
+        <form class="formcontainer">
+            <i class="material-icons close" id="closeBtn">close</i></span>
+            <h5 class="login-heading">Sign in</h5>
+            <button type="button" class="google-btn">
+                <div class="google-icon-wrapper">
+                    <img class="google-icon" src="g-logo.png" alt="Google logo">
+                </div>
+                <span>Sign in with Google</span>
+            </button>
+            <button type="button" class="facebook-btn">
+            <div class="facebook-icon-wrapper">
+                <img class="facebook-icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+                    alt="facebook logo">
+            </div>
+            <span>Sign in with Facebook</span>
+            </button>
+            <div class="separator">
+                <div></div>
+                <span>or</span>
+                <div></div>
+            </div>
+
+            <input type="email" placeholder="id@email.com" required>
+            <input type="password" placeholder="Password" required>
+            <div class="submit">
+                <button class="submit-btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="rishikesh.js"></script>
+</body>
+
+</html>
