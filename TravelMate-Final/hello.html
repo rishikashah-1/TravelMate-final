@@ -37,7 +37,8 @@
         <button onclick="sendMessage()">Send</button>
     </div>
 </div>
-
+<script type="module" src="auth.js"></script>
+<script type="module" src="firebase-config.js"></script>
 <body>
     <div id="mainContent">
         <header>
@@ -421,36 +422,37 @@
     </div>
 
     <div id="formPopup" class="form-pop-up">
-        <form class="formcontainer">
-            <i class="material-icons close" id="closeBtn">close</i></span>
-            <h5 class="login-heading">Sign in</h5>
-            <a href="#" class="google-btn">
-                <div class="google-icon-wrapper">
-                    <img class="google-icon" src="g-logo.png" alt="Google logo">
-                </div>
-                <span>Sign in with Google</span>
-            </a>
-            <a href="#" class="facebook-btn">
-                <div class="facebook-icon-wrapper">
-                    <img class="facebook-icon"
-                        src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
-                        alt="facebook logo">
-                </div>
-                <span>Sign in with Facebook</span>
-            </a>
-            <div class="separator">
-                <div></div>
-                <span>or</span>
-                <div></div>
+    <form class="formcontainer" id="authForm">
+        <i class="material-icons close" id="closeBtn">close</i></span>
+        <h5 class="login-heading">Sign in</h5>
+        <a href="#" class="google-btn">
+            <div class="google-icon-wrapper">
+                <img class="google-icon" src="g-logo.png" alt="Google logo">
             </div>
+            <span>Sign in with Google</span>
+        </a>
+        <a href="#" class="facebook-btn">
+            <div class="facebook-icon-wrapper">
+                <img class="facebook-icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+                    alt="facebook logo">
+            </div>
+            <span>Sign in with Facebook</span>
+        </a>
+        <div class="separator">
+            <div></div>
+            <span>or</span>
+            <div></div>
+        </div>
 
-            <input type="email" placeholder="id@email.com" required>
-            <input type="password" placeholder="Password" required>
-            <div class="submit">
-                <button class="submit-btn" type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
+        <input type="email" id="authEmail" placeholder="id@email.com" required>
+        <input type="password" id="authPassword" placeholder="Password" required>
+        <p id="authMessage" style="color: red; font-size: 14px;"></p>
+        <div class="submit">
+            <button class="submit-btn" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
